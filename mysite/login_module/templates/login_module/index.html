@@ -1,0 +1,12 @@
+{% if invalid_password %}
+	<h5>Invalid Password</h5>
+{% endif%}
+{% if invalid_username %}
+	<h5>Invalid Username</h5>
+{% endif%}
+<form method="post">
+	{% csrf_token %}
+	<input type="email" name="username" id="username" value="username">
+	<input type="password" name="password" id="password" value="password">
+	<input type="submit" value="login">
+</form>
